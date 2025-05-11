@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медовый Рай - Натуральный мед с любовью</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .honeycomb-bg {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23fef08a" opacity="0.2"><path d="M50 0L15 30v40l35 30 35-30V30L50 0zm0 10l30 25v30L50 80 20 65V35L50 10z"/></svg>');
+            background-size: 80px;
+        }
+        .bee-fly {
+            animation: beeFly 8s infinite linear;
+        }
+        @keyframes beeFly {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(100px, 50px) rotate(10deg); }
+            50% { transform: translate(200px, -30px) rotate(-5deg); }
+            75% { transform: translate(100px, 40px) rotate(5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        .honey-drip {
+            position: relative;
+        }
+        .honey-drip:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 30px;
+            background: #f59e0b;
+            border-radius: 0 0 10px 10px;
+            clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+        }
+    </style>
+</head>
+<body class="bg-amber-50 font-sans">
+    <!-- Пчела анимированная -->
+    <div class="fixed top-20 right-10 z-0 bee-fly">
+        <i class="fas fa-bug text-3xl text-amber-900"></i>
+    </div>
+    
+    <!-- Шапка сайта -->
+    <header class="honeycomb-bg py-6 shadow-md">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-4 md:mb-0">
+                <i class="fas fa-honey-pot text-4xl text-amber-600 mr-3 honey-drip"></i>
+                <h1 class="text-3xl font-bold text-amber-900">Медовый <span class="text-amber-600">Рай</span></h1>
+            </div>
+            <nav class="flex space-x-1">
+                <a href="#about" class="px-4 py-2 bg-amber-100 hover:bg-amber-200 rounded-full text-amber-900 font-medium transition">О нас</a>
+                <a href="#products" class="px-4 py-2 bg-amber-100 hover:bg-amber-200 rounded-full text-amber-900 font-medium transition">Продукция</a>
+                <a href="#contacts" class="px-4 py-2 bg-amber-100 hover:bg-amber-200 rounded-full text-amber-900 font-medium transition">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="py-16 relative overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-900 mb-6">Натуральный мед <br>с любовью к природе</h2>
+                <p class="text-lg text-amber-800 mb-8">Собранный в экологически чистых районах, наш мед сохраняет все полезные свойства и неповторимый вкус.</p>
+                <a href="#products" class="px-8 py-3 bg-amber-500 hover:bg-amber-600 rounded-full text-white font-bold text-lg shadow-lg hover:shadow-amber-200 transition">Выбрать мед</a>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="bg-amber-100 rounded-3xl p-8 relative z-10 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1587049352851-3d25bb4d46ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Банки с медом" 
+                         class="w-full h-auto rounded-2xl border-4 border-amber-200">
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-amber-200 rounded-full opacity-30 z-0"></div>
+                <div class="absolute -top-10 -left-10 w-32 h-32 bg-amber-300 rounded-full opacity-20 z-0"></div>
+            </div>
+        </div>
+        
+        <!-- Декоративные соты -->
+        <div class="absolute -bottom-20 -left-20 opacity-10">
+            <i class="fas fa-honeycomb text-amber-400 text-9xl"></i>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="py-16 bg-amber-100 honeycomb-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amber-900 mb-4">О нашем хозяйстве</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Пчеловод" 
+                         class="w-full h-auto rounded-2xl border-4 border-amber-200 shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <p class="text-amber-800 mb-6 text-lg">Мы - семья пчеловодов с 20-летним опытом работы. Наши ульи расположены вдали от промышленных зон, среди цветущих лугов и лесов.</p>
+                    <p class="text-amber-800 mb-6 text-lg">Мы не используем химикаты и антибиотики, позволяя пчелам жить в гармонии с природой. Это делает наш мед по-настоящему натуральным и полезным.</p>
+                    <div class="flex items-center mt-8">
+                        <i class="fas fa-check-circle text-2xl text-amber-600 mr-3"></i>
+                        <span class="text-amber-900 font-medium">Экологически чистое производство</span>
+                    </div>
+                    <div class="flex items-center mt-3">
+                        <i class="fas fa-check-circle text-2xl text-amber-600 mr-3"></i>
+                        <span class="text-amber-900 font-medium">Традиционные методы пчеловодства</span>
+                    </div>
+                    <div class="flex items-center mt-3">
+                        <i class="fas fa-check-circle text-2xl text-amber-600 mr-3"></i>
+                        <span class="text-amber-900 font-medium">Забота о каждом улье</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Продукция -->
+    <section id="products" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amber-900 mb-4">Наша продукция</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Продукт 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="h-48 bg-amber-100 flex items-center justify-center">
+                        <i class="fas fa-jar text-9xl text-amber-400 opacity-70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Цветочный мед</h3>
+                        <p class="text-amber-700 mb-4">Собран с разнотравья, имеет нежный цветочный аромат и светло-янтарный цвет.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-900 font-bold text-lg">450₽/кг</span>
+                            <button class="px-4 py-2 bg-amber-500 hover:bg-amber-600 rounded-full text-white font-medium transition">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Продукт 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="h-48 bg-amber-100 flex items-center justify-center">
+                        <i class="fas fa-jar text-9xl text-amber-400 opacity-70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Гречишный мед</h3>
+                        <p class="text-amber-700 mb-4">Темный насыщенный мед с характерным вкусом и высокой биологической активностью.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-900 font-bold text-lg">550₽/кг</span>
+                            <button class="px-4 py-2 bg-amber-500 hover:bg-amber-600 rounded-full text-white font-medium transition">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Продукт 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="h-48 bg-amber-100 flex items-center justify-center">
+                        <i class="fas fa-jar text-9xl text-amber-400 opacity-70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Липовый мед</h3>
+                        <p class="text-amber-700 mb-4">Ароматный светлый мед с нежным вкусом, отличное средство при простуде.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-900 font-bold text-lg">600₽/кг</span>
+                            <button class="px-4 py-2 bg-amber-500 hover:bg-amber-600 rounded-full text-white font-medium transition">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Дополнительные продукты -->
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-amber-50 rounded-lg p-4 text-center">
+                    <i class="fas fa-bread-slice text-3xl text-amber-600 mb-2"></i>
+                    <h4 class="font-medium text-amber-900">Перга</h4>
+                    <p class="text-sm text-amber-700">350₽/100г</p>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 text-center">
+                    <i class="fas fa-prescription-bottle text-3xl text-amber-600 mb-2"></i>
+                    <h4 class="font-medium text-amber-900">Прополис</h4>
+                    <p class="text-sm text-amber-700">700₽/50г</p>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 text-center">
+                    <i class="fas fa-spa text-3xl text-amber-600 mb-2"></i>
+                    <h4 class="font-medium text-amber-900">Воск</h4>
+                    <p class="text-sm text-amber-700">250₽/100г</p>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 text-center">
+                    <i class="fas fa-mortar-pestle text-3xl text-amber-600 mb-2"></i>
+                    <h4 class="font-medium text-amber-900">Маточное молочко</h4>
+                    <p class="text-sm text-amber-700">1500₽/10г</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="py-16 bg-amber-900 text-white honeycomb-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Как нас найти</h2>
+                <div class="w-20 h-1 bg-amber-400 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4 text-amber-200">Контакты</h3>
+                    <div class="mb-4 flex items-start">
+                        <i class="fas fa-map-marker-alt text-amber-400 mt-1 mr-3"></i>
+                        <p>с. Пчелиное, ул. Медоносная, 15</p>
+                    </div>
+                    <div class="mb-4 flex items-start">
+                        <i class="fas fa-phone text-amber-400 mt-1 mr-3"></i>
+                        <p>+7 (123) 456-78-90</p>
+                    </div>
+                    <div class="mb-4 flex items-start">
+                        <i class="fas fa-envelope text-amber-400 mt-1 mr-3"></i>
+                        <p>medovy.ray@example.com</p>
+                    </div>
+                    <div class="mb-4 flex items-start">
+                        <i class="fas fa-clock text-amber-400 mt-1 mr-3"></i>
+                        <p>Ежедневно с 9:00 до 18:00</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mt-8 mb-4 text-amber-200">Мы в соцсетях</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-amber-700 hover:bg-amber-600 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-bold mb-4 text-amber-200">Напишите нам</h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Ваше имя" class="w-full px-4 py-2 rounded-lg bg-amber-800 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <input type="email" placeholder="Ваш email" class="w-full px-4 py-2 rounded-lg bg-amber-800 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <input type="tel" placeholder="Ваш телефон" class="w-full px-4 py-2 rounded-lg bg-amber-800 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <textarea placeholder="Ваше сообщение" rows="4" class="w-full px-4 py-2 rounded-lg bg-amber-800 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        <button type="submit" class="px-6 py-2 bg-amber-500 hover:bg-amber-400 rounded-lg text-amber-900 font-bold transition">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="py-6 bg-amber-950 text-amber-200">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p>© 2023 Медовый Рай. Все права защищены.</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-amber-400 transition">Политика конфиденциальности</a>
+                <a href="#" class="hover:text-amber-400 transition">Условия использования</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Анимация для второй пчелы
+        function createFlyingBee() {
+            const bee = document.createElement('div');
+            bee.className = 'fixed z-0 bee-fly';
+            bee.style.top = Math.random() * window.innerHeight + 'px';
+            bee.style.left = Math.random() * window.innerWidth + 'px';
+            bee.innerHTML = '<i class="fas fa-bug text-2xl text-amber-900"></i>';
+            document.body.appendChild(bee);
+            
+            // Удаляем пчелу через 10 секунд
+            setTimeout(() => {
+                bee.remove();
+            }, 10000);
+        }
+        
+        // Создаем несколько пчел
+        setInterval(createFlyingBee, 3000);
+    </script>
+</body>
+</html>
